@@ -33,4 +33,15 @@ class ContactsController < ApplicationController
      contact.save
      redirect_to '/contacts'
     end
+    
+    def search
+    end
+    def search_results
+         #need to be able to search by first name full name or last name or
+    @first_name = "%#{params[:first_name]}%"
+    @last_name ="%#{params[:last_name]}%"
+    @contacts = Contact.where("last_name LIKE ? and first_name LIKE ?",@last_name,@first_name)
+    @first_name_no_per = params[:first_name]
+    @last_name_no_per = params[:last_name]
+    end
 end

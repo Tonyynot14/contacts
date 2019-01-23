@@ -4,5 +4,7 @@ Rails.application.routes.draw do
   get "/contacts/new" => "contacts#new"
   post "contacts" => "contacts#create"
   get "contacts/edit" => "contacts#edit"
-  post"contacts/edit" =>"contacts#editInfo"
+  post "contacts/edit" =>"contacts#editInfo"
+  get "contacts/search" =>"contacts#search"
+  get "contacts/search_results" => "contacts#search_results"
 end
