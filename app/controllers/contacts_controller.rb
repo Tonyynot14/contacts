@@ -1,3 +1,4 @@
+# Contains all methods for application
 class ContactsController < ApplicationController
     def index
         @contacts = Contact.all 
